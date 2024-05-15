@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #007BFF;
+}
+
+.profile ul, .work-experience ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile li, .work-experience li {
+    margin: 5px 0;
+}
+
+.profile a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.profile a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.additional-info {
+    margin-top: 20px;
+    background-color: #e9ecef;
+    padding: 10px;
+    border-left: 4px solid #007BFF;
+}

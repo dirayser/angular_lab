@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>About Dmytro Dmytriiev</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/main.controller.js"></script>
+    <script src="app/services/data.service.js"></script>
+</head>
+<body ng-controller="MainController">
+    <div class="container">
+        <h1>{{title}}</h1>
+        <p>{{description}}</p>
+        
+        <div class="profile">
+            <h2>Profile</h2>
+            <ul>
+                <li><strong>Name:</strong> {{profile.name}}</li>
+                <li><strong>Occupation:</strong> {{profile.occupation}}</li>
+                <li><strong>Location:</strong> {{profile.location}}</li>
+                <li><strong>LinkedIn:</strong> <a ng-href="{{profile.linkedin}}" target="_blank">{{profile.linkedin}}</a></li>
+            </ul>
+        </div>
+        
+        <div class="work-experience">
+            <h2>Work Experience</h2>
+            <ul>
+                <li ng-repeat="job in profile.workExperience">
+                    <strong>{{job.position}}</strong> at {{job.company}} ({{job.years}})
+                </li>
+            </ul>
+        </div>
+        
+        <button ng-click="toggleInfo()">Toggle Additional Info</button>
+        
+        <div ng-show="showInfo" class="additional-info">
+            <h2>Additional Information</h2>
+            <p>{{additionalInfo}}</p>
+        </div>
+    </div>
+</body>
+</html>
